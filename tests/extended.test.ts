@@ -40,7 +40,7 @@ describe("extended", async () => {
     });
 
     const content = await fs.readFile(path.join(tmpdir, `${schema.name}.ts`), {
-      encoding: "utf-8",
+      encoding: "utf8",
     });
 
     expect(content).toMatchSnapshot();
