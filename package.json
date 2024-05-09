@@ -103,17 +103,17 @@
     "validate:debug": "node --nolazy tests/validate.js"
   },
   "dependencies": {
-    "@types/swagger-schema-official": "^2.0.25",
-    "cosmiconfig": "^9.0.0",
-    "didyoumean": "^1.2.2",
-    "eta": "^2.2.0",
-    "js-yaml": "^4.1.0",
-    "lodash": "^4.17.21",
-    "nanoid": "^3.3.7",
-    "node-emoji": "^2.1.3",
+    "@types/swagger-schema-official": "2.0.25",
+    "cosmiconfig": "9.0.0",
+    "didyoumean": "1.2.2",
+    "eta": "2.2.0",
+    "js-yaml": "4.1.0",
+    "lodash": "4.17.21",
+    "nanoid": "3.3.7",
+    "node-emoji": "2.1.3",
     "prettier": "3.2.5",
     "swagger-schema-official": "2.0.0-bab6bed",
-    "swagger2openapi": "^7.0.8",
+    "swagger2openapi": "7.0.8",
     "typescript": "5.4.5"
   },
   "devDependencies": {
@@ -124,7 +124,8 @@
     "cross-env": "7.0.3",
     "dotenv": "16.4.5",
     "git-diff": "2.0.6",
-    "shx": "0.3.4"
+    "shx": "0.3.4",
+    "vitest": "1.6.0"
   },
   "packageManager": "yarn@4.2.1",
   "engines": {

@@ -3,6 +3,7 @@
   "files": {
     "ignore": [
       "package.json",
+      "tests/__snapshots__/**",
       "tests/**/expected.ts",
       "tests/**/expected/**",
       "tests/**/generated/**",
