@@ -17,15 +17,16 @@ describe("basic", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  test("additional properties 2.0", async () => {
+  test("--axios --single-http-client", async () => {
     // @ts-expect-error
     await generateApi({
       name: "schema",
       input: path.resolve(__dirname, "schema.json"),
       output: tmpdir,
       silent: true,
-      addReadonly: true,
-      generateClient: false,
+      generateClient: true,
+      httpClientType: "axios",
+      singleHttpClient: true,
     });
 
     const content = await fs.readFile(path.join(tmpdir, "schema.ts"), {

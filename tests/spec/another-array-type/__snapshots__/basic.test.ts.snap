@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`basic > schema.json 1`] = `
+exports[`basic > --another-array-type option 1`] = `
 "/* eslint-disable */
 /* tslint:disable */
 /*

@@ -17,7 +17,7 @@ describe("basic", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  test("additional properties 2.0", async () => {
+  test("const-keyword", async () => {
     // @ts-expect-error
     await generateApi({
       name: "schema",

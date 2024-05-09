@@ -17,15 +17,14 @@ describe("basic", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  test("additional properties 2.0", async () => {
+  test("another-query-params", async () => {
     // @ts-expect-error
     await generateApi({
       name: "schema",
       input: path.resolve(__dirname, "schema.json"),
       output: tmpdir,
       silent: true,
-      addReadonly: true,
-      generateClient: false,
+      generateClient: true,
     });
 
     const content = await fs.readFile(path.join(tmpdir, "schema.ts"), {
