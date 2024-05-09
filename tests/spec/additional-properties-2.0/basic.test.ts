@@ -6,7 +6,7 @@ import { afterAll, beforeAll, describe, expect, test } from "vitest";
 
 import { generateApi } from "../../../src/index.js";
 
-describe("simple", async () => {
+describe("basic", async () => {
   let tmpdir = "";
 
   beforeAll(async () => {
@@ -17,7 +17,7 @@ describe("simple", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  test("basic", async () => {
+  test("schema.json", async () => {
     // @ts-expect-error
     await generateApi({
       name: "schema",
