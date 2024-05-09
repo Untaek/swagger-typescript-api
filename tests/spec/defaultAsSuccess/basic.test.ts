@@ -17,15 +17,14 @@ describe("basic", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  test("--another-array-type", async () => {
+  test("--default-as-success", async () => {
     // @ts-expect-error
     await generateApi({
       name: "schema",
       input: path.resolve(__dirname, "schema.json"),
       output: tmpdir,
       silent: true,
-      anotherArrayType: true,
-      generateClient: false,
+      defaultResponseAsSuccess: true,
     });
 
     const content = await fs.readFile(path.join(tmpdir, "schema.ts"), {
