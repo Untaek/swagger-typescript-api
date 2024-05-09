@@ -18,9 +18,6 @@ describe("extended", async () => {
     await fs.rm(tmpdir, { recursive: true });
   });
 
-  const typePrefix = "IMySuperPrefix";
-  const typeSuffix = "MySuperSuffix";
-
   const schemas = await collectAllSchemas();
 
   test.each(schemas)("$name", async (schema) => {
@@ -37,11 +34,9 @@ describe("extended", async () => {
       extractResponseError: true,
       extractResponses: true,
       generateClient: true,
-      generateRouteTypes: false,
+      generateRouteTypes: true,
       sortRoutes: true,
       sortTypes: true,
-      typePrefix: typePrefix,
-      typeSuffix: typeSuffix,
     });
 
     const content = await fs.readFile(path.join(tmpdir, `${schema.name}.ts`), {
