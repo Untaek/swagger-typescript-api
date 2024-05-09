@@ -62045,8 +62045,6 @@ export type ReposDetailData = Repos;
 
 export type ReposDetailOutput = TeamRepos;
 
-export type ReposDetailOutput1 = Repos;
-
 export interface ReposDetailParams {
   /** Name of organisation. */
   org: string;
@@ -62082,6 +62080,8 @@ export enum ReposDetailParams5TypeEnum {
 }
 
 export type ReposDetailResult = Repo;
+
+export type ReposDetailResult1 = Repos;
 
 export type ReposListData = Repos;
 
@@ -68088,7 +68088,7 @@ export namespace Users {
       /** Is used to set specified media type. */
       Accept?: string;
     };
-    export type ResponseBody = ReposDetailOutput1;
+    export type ResponseBody = ReposDetailResult1;
   }
   /**
    * @description List repositories being starred by a user.
@@ -71802,7 +71802,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/users/{username}/repos
      */
     reposDetail: ({ username, ...query }: ReposDetailParams4, params: RequestParams = {}) =>
-      this.request<ReposDetailOutput1, void>({
+      this.request<ReposDetailResult1, void>({
         path: \`/users/\${username}/repos\`,
         method: "GET",
         query: query,
