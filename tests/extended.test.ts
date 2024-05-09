@@ -5,7 +5,7 @@ import * as path from "node:path";
 import { afterAll, beforeAll, describe, expect, test } from "vitest";
 
 import { generateApi } from "../src/index.js";
-import { collectAllSchemas, sleep } from "./utils.js";
+import { collectAllSchemas } from "./utils.js";
 
 describe("extended", async () => {
   let tmpdir = "";
@@ -48,10 +48,6 @@ describe("extended", async () => {
       encoding: "utf-8",
     });
 
-    await sleep(1000);
-
-    expect(content).toMatchFileSnapshot(
-      path.join(__dirname, "__snapshots__", "extended", `${schema.name}.ts`),
-    );
+    expect(content).toMatchSnapshot();
   });
 });

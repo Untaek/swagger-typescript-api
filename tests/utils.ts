@@ -1,10 +1,6 @@
 import * as fs from "node:fs/promises";
 import * as path from "node:path";
 
-export function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export async function collectAllSchemas() {
   const schemas = [];
   const schemaPath = path.join(__dirname, "fixtures", "schemas");
