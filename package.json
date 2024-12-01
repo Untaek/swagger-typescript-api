@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/acacode/swagger-typescript-api"
+    "url": "git://github.com/Untaek/swagger-typescript-api"
   },
   "license": "MIT",
   "author": "acacode",
